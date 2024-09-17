@@ -62,7 +62,7 @@ createCollectable("database",200,100);//create a "grace" collectible at the coor
     // example usage: createCannon(side, position, delay, width, height)
 createCannon("top", 700, 600); // cannon on left wall, 600px down, shooting once per second
 createCannon("top",1050,700)
-
+createCannon("top", 250,700)
     
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
