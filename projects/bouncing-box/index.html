@@ -22,7 +22,9 @@
 
 		.board {
 			height: 100vh;
+		   width: 215vh;
 		}
+
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
@@ -67,7 +69,8 @@
 
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
-			var points = 0
+			var points = 0;
+			var speed = 10;
 
 
 
@@ -77,9 +80,15 @@
 			turn it around! 
 			*/
 			function update() {
-				positionX = positionX+ 10
+				positionX = positionX+ speed;
 				moveBoxTo(positionX);
-
+				if(positionX > boardWidth) {
+					speed = -speed;
+				}
+				if(positionX < 0){
+					speed = -speed
+				}
+            
 
 			};
 
@@ -90,9 +99,12 @@
 			*/
 			function handleBoxClick() {
 				positionX=0;
+				points=points+1;
+				speed=speed+3;
 				// your code to increase the points varible by 1
 				changeBoxText(points);
-				points=points+1
+
+				
 			};
 
 
